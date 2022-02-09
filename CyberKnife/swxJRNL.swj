@@ -1,0 +1,622 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 12/07/21 by mahima
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+swApp.ActivateDoc2 "end_effector_v1", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.Extension.SelectByID2("Annotations", "DCABINET", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Unknown", "BROWSERITEM", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Annotations", "DCABINET", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("D3@Sketch1@end_effector_v1.SLDPRT", "DIMENSION", -0.149355859913148592, 0.11457678555438644, 0.03999999999999750283, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.1746919900491650246, 0.04583936283510835902, 0.1186090035710094526, 0, 0, -1, 0.008346687044483831752, 2, False, 0, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SketchBoxSelect("0.000000", "0.000000", "0.000000", "0.000000", "0.000000", "0.000000")
+boolstatus = Part.Extension.SelectByID2("D3@Sketch1@end_effector_v1.SLDPRT", "DIMENSION", -0.137081320141848817, 0.12439641737142626, 0.03999999999999743344, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("D4@Sketch1@end_effector_v1.SLDPRT", "DIMENSION", -0.2352776383122465731, -0.167737629185507886, 0.03999999999999947348, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("D6@Sketch1@end_effector_v1.SLDPRT", "DIMENSION", -0.07816352923960989685, -0.6390799564034184144, 0.04000000000000276945, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("D5@Sketch1@end_effector_v1.SLDPRT", "DIMENSION", -0.4022113792019235134, -0.4328676882455825825, 0.04000000000000132616, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("D1@Sketch1@end_effector_v1.SLDPRT", "DIMENSION", -0.3334739564826447733, -0.3714949893890838184, 0.04000000000000089595, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("D2@Sketch1@end_effector_v1.SLDPRT", "DIMENSION", -0.2107285587696474671, -0.5899817973182193143, 0.04000000000000242251, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("D5@Sketch1@end_effector_v1.SLDPRT", "DIMENSION", -0.5077724212351011346, -0.4574167677881820215, 0.04000000000000149963, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SketchBoxSelect("0.000000", "0.000000", "0.000000", "0.000000", "0.000000", "0.000000")
+
+' Open
+Set Part = swApp.OpenDoc6("D:\projects\ENPM662\project2\design\ck_robot_assembly.SLDASM", 2, 0, "", longstatus, longwarnings)
+Dim swAssembly As Object
+Set swAssembly = Part
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 33
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "ck_robot_assembly", False, longstatus
+Set Part = swApp.ActiveDoc
+boolstatus = Part.Extension.SelectByRay(0.5914167663109672901, 0.6575930752142403746, 0.2458993664616855312, 0, 0, -1, 0.01908836468357042598, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.5914167663109672901, 0.6575930752142403746, 0.2458993664616855312, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("lower_arm_1-1@ck_robot_assembly", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+Dim TransformData() As Double
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.02944639530014659876
+TransformData(1) = -0.9994932477082054678
+TransformData(2) = -0.01208956531606132472
+TransformData(3) = 0.9246005996430177731
+TransformData(4) = 0.03183155330334680455
+TransformData(5) = -0.3796056945753947254
+TransformData(6) = 0.3797981581624628733
+TransformData(7) = 0
+TransformData(8) = 0.9250693806717422696
+TransformData(9) = 0.2977915836193369414
+TransformData(10) = 0.6190502582716035374
+TransformData(11) = -0.01844278747355210246
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+Dim TransformDataVariant As Variant
+TransformDataVariant = TransformData
+Dim swMathUtil As Object
+Set swMathUtil = swApp.GetMathUtility()
+Dim swTransform As Object
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Dim swComp As Object
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+
+' Zoom In/Out (MouseWheel)
+Dim swModelView As Object
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 0.08927243597963543942
+Dim swTranslation() As Double
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = -0.02837746542518952697
+swTranslation(1) = -0.03863343287557698819
+swTranslation(2) = -0.006029571050705766037
+Dim swTranslationVar As Variant
+swTranslationVar = swTranslation
+Dim swMathUtils As Object
+Set swMathUtils = swApp.GetMathUtility()
+Dim swTranslationVector As MathVector
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 0.1075571517826933166
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = -0.05366316864144062004
+swTranslation(1) = -0.04416124042394889426
+swTranslation(2) = -0.007264543434585261916
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 0.1295869298586666551
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = -0.08380986274556651017
+swTranslation(1) = -0.05082124951837285048
+swTranslation(2) = -0.008752461969379832923
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.2010655085409931431, 0.385050258271974144, 0.09720394547653676831, 0, -1, 0, 0.01455039723695343221, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.2010655085409931431, 0.385050258271974144, 0.09720394547653676831, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Body_1-1@ck_robot_assembly", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.9995158235515324563
+TransformData(1) = 0
+TransformData(2) = -0.03111460220060779241
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = 0.03111460220060779241
+TransformData(7) = 0
+TransformData(8) = 0.9995158235515324563
+TransformData(9) = -0.05587454779870509175
+TransformData(10) = 0.2338025638422868424
+TransformData(11) = 0.02949128494909281431
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(0.1497111653517455565, 0.3760502582720164355, 0.1956331032559278094, 0, -1, 0, 0.01455039723695343221, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.1497111653517455565, 0.3760502582720164355, 0.1956331032559278094, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Body_1-1@ck_robot_assembly", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.9999889459877145947
+TransformData(1) = 0
+TransformData(2) = 0.004701904122763162289
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = -0.004701904122763162289
+TransformData(7) = 0
+TransformData(8) = 0.9999889459877145947
+TransformData(9) = -0.05699431662447734803
+TransformData(10) = 0.2338025638422868424
+TransformData(11) = 0.0276068190009639558
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByID2("Right Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(0.610886108191528443, 0.6230762182461688781, 0.2451858400850710495, 0, 0, -1, 0.01290242489362731192, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.610886108191528443, 0.6230762182461688781, 0.2451858400850710495, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("lower_arm_1-1@ck_robot_assembly", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.0318127559582281963
+TransformData(1) = -0.9994485488047503141
+TransformData(2) = -0.009515610880056500631
+TransformData(3) = 0.9575315177454670756
+TransformData(4) = 0.03320539552660731197
+TransformData(5) = -0.2864101852797554248
+TransformData(6) = 0.2865682136637007216
+TransformData(7) = 0
+TransformData(8) = 0.95805984098990149
+TransformData(9) = 0.2978708703601660179
+TransformData(10) = 0.6190502582716049806
+TransformData(11) = 0.01142679274049401145
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 0.09135064451202877522
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.05505710634335520687
+swTranslation(1) = -0.02381236080926249846
+swTranslation(2) = -0.07642595473455751631
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 0.076125537093357315
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.05517141649357960864
+swTranslation(1) = -0.01984363400771873079
+swTranslation(2) = -0.06368829561213126822
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 0.0634379475777977625
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.05526667495209983821
+swTranslation(1) = -0.01653636167309895447
+swTranslation(2) = -0.05307357967677606148
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 0.05286495631483147106
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.05534605700086682456
+swTranslation(1) = -0.013780301394249116
+swTranslation(2) = -0.04422798306398006279
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 0.04405413026235956153
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.0554122087081725459
+swTranslation(1) = -0.0114835844952076143
+swTranslation(2) = -0.03685665255331671553
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 0.05307726537633682823
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.03986804610242485752
+swTranslation(1) = -0.01971880244216808742
+swTranslation(2) = -0.04440560548592376727
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 0.06394851250161064093
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.02230617075738438801
+swTranslation(1) = -0.0303827717633197332
+swTranslation(2) = -0.05350072950111297437
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+
+' Zoom In/Out (MouseWheel)
+Set swModelView = Part.ActiveView
+swModelView.Scale2 = 0.07704640060435018201
+ReDim swTranslation(0 To 2) As Double
+swTranslation(0) = 0.002631324774433022474
+swTranslation(1) = -0.04450296183616069684
+swTranslation(2) = -0.06445871024230478974
+swTranslationVar = swTranslation
+Set swMathUtils = swApp.GetMathUtility()
+Set swTranslationVector = swMathUtils.CreateVector((swTranslationVar))
+swModelView.Translation3 = swTranslationVector
+boolstatus = Part.Extension.SelectByRay(0.8513234978129800012, 0.655901504630900134, -0.006278538274045786238, 0, 0, -1, 0.01835742857118261018, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.8513234978129800012, 0.655901504630900134, -0.006278538274045786238, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("lower_arm_1-1@ck_robot_assembly", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.9571049439960978011
+TransformData(1) = -0.04463635270576904457
+TransformData(2) = -0.2862825914989464149
+TransformData(3) = 0.04276429697565781174
+TransformData(4) = 0.9990033013044181676
+TransformData(5) = -0.01279135985935656722
+TransformData(6) = 0.2865682136637002775
+TransformData(7) = 0
+TransformData(8) = 0.958059840989901601
+TransformData(9) = 0.2978708703597794383
+TransformData(10) = 0.6190502582728278913
+TransformData(11) = 0.01142679274061019108
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0.006951891014266154203, -0.05084658630087537934
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0.003475945507133077102, 0
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0.003475945507133077102, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0.003475945507133077102, -0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter -0.003475945507133077102, 0
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter -0.003475945507133077102, 0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter -0.003475945507133077102, 0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter -0.003475945507133077102, 0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, 0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter -0.003475945507133077102, 0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter -0.003475945507133077102, 0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter -0.003475945507133077102, 0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, 0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, 0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, 0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter -0.003475945507133077102, 0
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.02542329315043768967
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0.003475945507133077102, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.01271164657521884483
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0.003475945507133077102, 0
+Set myModelView = Part.ActiveView
+myModelView.RotateAboutCenter 0, -0.01271164657521884483
+
+' Roll View
+Set swModelView = Part.ActiveView
+swModelView.RollBy 0
+boolstatus = Part.Extension.SelectByRay(0.5838607817269121369, 1.271946333870291213, -0.1541365381485775288, -0.2759722541663202078, 0.003690501771610361654, -0.9611585171692720309, 0.01835742857118261018, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.5838607817269121369, 1.271946333870291213, -0.1541365381485775288, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("upper_arm_1-1@ck_robot_assembly", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = -0.9578668201403484073
+TransformData(1) = 0.02007238209811414154
+TransformData(2) = 0.2865104786061498654
+TransformData(3) = 0.01923054320120778232
+TransformData(4) = 0.9997985294432611969
+TransformData(5) = -0.005752106681831790566
+TransformData(6) = -0.2865682136637002775
+TransformData(7) = 0
+TransformData(8) = -0.958059840989901712
+TransformData(9) = 0.7452537133504499867
+TransformData(10) = 1.266292540594478933
+TransformData(11) = -0.2612134860438045658
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(0.3182010340559315864, 1.029553675207850461, 0.1567996342308788371, -0.2759722541663202078, 0.003690501771610361654, -0.9611585171692720309, 0.01835742857118261018, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "EDGE", 0.3182010340559315864, 1.029553675207850461, 0.1567996342308788371, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("lower_arm_1-1@ck_robot_assembly", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.9260589461596546723
+TransformData(1) = -0.04529000352967054582
+TransformData(2) = -0.3746513630269505124
+TransformData(3) = 0.04198429380796037114
+TransformData(4) = 0.9989738813303791209
+TransformData(5) = -0.01698539058027311033
+TransformData(6) = 0.3750361946680830227
+TransformData(7) = 0
+TransformData(8) = 0.9270101686005841612
+TransformData(9) = 0.2978685118292522804
+TransformData(10) = 0.6190502582728282244
+TransformData(11) = -0.0168915490846073546
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(0.3821620316078053747, 1.045556195459558912, 0.1054230521437489188, -0.2759722541663202078, 0.003690501771610361654, -0.9611585171692720309, 0.01835742857118261018, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.3821620316078053747, 1.045556195459558912, 0.1054230521437489188, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("lower_arm_1-1@ck_robot_assembly", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.9738445673377473799
+TransformData(1) = -0.04529000352967053888
+TransformData(2) = -0.2226557303260759679
+TransformData(3) = 0.04415072777812718841
+TransformData(4) = 0.9989738813303791209
+TransformData(5) = -0.01009443690253584644
+TransformData(6) = 0.2228844362072361918
+TransformData(7) = 0
+TransformData(8) = 0.9748448738628021637
+TransformData(9) = 0.2962862269829201201
+TransformData(10) = 0.6190502582728282244
+TransformData(11) = 0.03125517260303058154
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(0.3082172927141471064, 1.294452087261288131, 0.03981115044609850884, -0.2759722541663202078, 0.003690501771610361654, -0.9611585171692720309, 0.00215969747896266025, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("Unknown", "POINTREF", 0.2962862269829201201, 0.6190502582728282244, 0.03125517260303058154, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.3380875523799886651, 0.8242472130386566675, 0.1704395072536044609, -0.2759722541663202078, 0.003690501771610361654, -0.9611585171692720309, 0.01835742857118261018, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.3380875523799886651, 0.8242472130386566675, 0.1704395072536044609, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("lower_arm_1-1@ck_robot_assembly", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.9434814407116743906
+TransformData(1) = -0.04529000352967051113
+TransformData(2) = -0.3283162905079579641
+TransformData(3) = 0.04277416915355582161
+TransformData(4) = 0.9989738813303791209
+TransformData(5) = -0.01488471944446922816
+TransformData(6) = 0.3286535280289051841
+TransformData(7) = 0
+TransformData(8) = 0.9444505590628624603
+TransformData(9) = 0.2982007564470907091
+TransformData(10) = 0.6190502582728283354
+TransformData(11) = -0.001928450046194766935
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(0.3719932874849689597, 1.278059954936684672, -0.01172480791689167745, -0.2759722541663202078, 0.003690501771610361654, -0.9611585171692720309, 0.00215969747896266025, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "VERTEX", 0.4097176123784404544, 1.273694776101171211, 0.06068263925782202417, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("lower_arm_1-1@ck_robot_assembly", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.9042874697515930205
+TransformData(1) = -0.04529000352967047643
+TransformData(2) = -0.4245150028332854708
+TransformData(3) = 0.04099725074127452684
+TransformData(4) = 0.9989738813303791209
+TransformData(5) = -0.01924603469223283223
+TransformData(6) = 0.424951053042487481
+TransformData(7) = 0
+TransformData(8) = 0.905216329126955932
+TransformData(9) = 0.2966487534166992734
+TransformData(10) = 0.6190502582728285574
+TransformData(11) = -0.03329666766870180428
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByRay(0.4696306899305966454, 1.278025764338947878, -0.199904312581566046, -0.2759722541663202078, 0.003690501771610361654, -0.9611585171692720309, 0.01835742857118261018, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.4696306899305966454, 1.278025764338947878, -0.199904312581566046, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("upper_arm_1-1@ck_robot_assembly", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = -0.9479862323770542609
+TransformData(1) = 0.0200723820981140097
+TransformData(2) = 0.3176778284685049525
+TransformData(3) = 0.01903217630317926776
+TransformData(4) = 0.9997985294432609749
+TransformData(5) = -0.006377835703229529397
+TransformData(6) = -0.3177418440947339384
+TransformData(7) = 0
+TransformData(8) = -0.9481772621779525068
+TransformData(9) = 0.7364004559909209657
+TransformData(10) = 1.266292540594479599
+TransformData(11) = -0.285569069528182562
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+boolstatus = Part.Extension.SelectByID2("Top Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Top Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.192648621688058963, 0.385050258271974144, 0.1202748097400106464, 0, -1, 0, 0.01325925124525919804, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("", "FACE", 0.192648621688058963, 0.385050258271974144, 0.1202748097400106464, False, 0, Nothing, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Body_1-1@ck_robot_assembly", "COMPONENT", 0, 0, 0, False, 0, Nothing, 0)
+ReDim TransformData(0 To 15) As Double
+TransformData(0) = 0.9998585350149202799
+TransformData(1) = 0
+TransformData(2) = 0.01681992740226877225
+TransformData(3) = 0
+TransformData(4) = 1
+TransformData(5) = 0
+TransformData(6) = -0.01681992740226877225
+TransformData(7) = 0
+TransformData(8) = 0.9998585350149202799
+TransformData(9) = -0.05735777402330907021
+TransformData(10) = 0.2338025638422868424
+TransformData(11) = 0.02696035750604158093
+TransformData(12) = 1
+TransformData(13) = 0
+TransformData(14) = 0
+TransformData(15) = 0
+TransformDataVariant = TransformData
+Set swMathUtil = swApp.GetMathUtility()
+Set swTransform = swMathUtil.CreateTransform((TransformDataVariant))
+Set swComp = Part.SelectionManager.GetSelectedObjectsComponent4(1, -1)
+boolstatus = swComp.SetTransformAndSolve2(swTransform)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Top Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Front Plane", "PLANE", 0, 0, 0, False, 0, Nothing, 0)
+Part.SketchManager.InsertSketch True
+Part.ClearSelection2 True
+Dim skSegment As Object
+Set skSegment = Part.SketchManager.CreateLine(0.000000, -0.107033, 0.000000, 1.350908, -0.107033, 0.000000)
+Part.ClearSelection2 True
+Part.EditUndo2 1
+Part.ClearSelection2 True
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "end_effector_v1", False, longstatus
+Set Part = swApp.ActiveDoc
+swApp.ExitApp
+End Sub
